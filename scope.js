@@ -43,12 +43,13 @@ function addMatrixElements(matrix) {
 
 // This function is returning the wrong userObject data. It should be returning
 // Neo's information and not Morpheus'.  Fix it!
+
 function sendDataToClient() {
 
   var userObject = {
     handle: 'neo',
     authenticated: false
-  }
+  };
 
   function authenticateUser(obj, username) {
     var userObject = {
@@ -56,13 +57,34 @@ function sendDataToClient() {
       authenticated: false
     };
 
-    if (userObject.handle === username) {
-      userObject.authenticated = true;
-      return userObject
+    if (obj.handle === username) {
+      obj.authenticated = true;
+      return obj;
     } else {
-      return userObject
+      return userObject;
     }
   }
-  authenticateUser(userObject, 'neo')
-  return userObject
+  authenticateUser(userObject, 'neo'); 
+  return userObject;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
